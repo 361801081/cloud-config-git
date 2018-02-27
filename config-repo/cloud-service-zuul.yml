@@ -23,13 +23,11 @@ zuul:
       path: /api-a/**
       serviceId: cloud-example-api1
       stripPrefix: false
-      sensitiveHeaders:
         
     api-b:
       path: /api-b/**
       serviceId: cloud-example-api2
       stripPrefix: false
-      sensitiveHeaders:   
         
     api-c:
       path: /api-c/**
