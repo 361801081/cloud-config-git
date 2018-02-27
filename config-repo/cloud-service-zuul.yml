@@ -19,18 +19,6 @@ zuul:
     connect-timeout-millis: 200000
     socket-timeout-millis: 200000
 
-  routes:
-    api1:
-        path: /api1/**
-        serviceId:  cloud-example-api1
-        stripPrefix: false
-        sensitiveHeaders:
 
-  routes:
-    api2:
-        path: /api2/**
-        serviceId:  cloud-example-api2
-        stripPrefix: false
-        sensitiveHeaders:
 
    
