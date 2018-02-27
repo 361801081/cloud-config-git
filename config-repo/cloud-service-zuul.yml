@@ -7,11 +7,11 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 20000
+            timeoutInMilliseconds: 50000
 
 ribbon:
-  ReadTimeout: 20000
-  ConnectTimeout: 20000
+  ReadTimeout: 50000
+  ConnectTimeout: 50000
 
 zuul:
   host:
@@ -24,11 +24,13 @@ zuul:
         serviceId: cloud-example-api1
         stripPrefix: false
         sensitiveHeaders:
+        
     api2-service:
         path: /api2/**
         serviceId: cloud-example-api2
         stripPrefix: false
         sensitiveHeaders:   
+        
     api3-service:
         path: /api3/**
         url: http://localhost:9001
