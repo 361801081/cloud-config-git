@@ -1,18 +1,6 @@
 server:
   port: 8083
   
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 40000
-
-ribbon:
-  ReadTimeout: 10000
-  ConnectTimeout: 10000
-
 zuul:
   host:
     connect-timeout-millis: 30000
