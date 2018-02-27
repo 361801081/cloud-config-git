@@ -21,11 +21,16 @@ zuul:
   routes:
     api1-service:
         path: /api1/**
-        serviceId: CLOUD-EXAMPLE-API1
+        serviceId: cloud-example-api1
         stripPrefix: false
         sensitiveHeaders:
     api2-service:
         path: /api2/**
-        serviceId: CLOUD-EXAMPLE-API2
+        serviceId: cloud-example-api2
+        stripPrefix: false
+        sensitiveHeaders:   
+    api3-service:
+        path: /api3/**
+        url: http://localhost:9001
         stripPrefix: false
         sensitiveHeaders:   
