@@ -26,4 +26,11 @@ zuul:
         stripPrefix: false
         sensitiveHeaders:
 
+  routes:
+    api2:
+        path: /api2/**
+        serviceId:  cloud-example-api2
+        stripPrefix: false
+        sensitiveHeaders:
+
    
