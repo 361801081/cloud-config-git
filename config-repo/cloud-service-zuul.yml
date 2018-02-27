@@ -14,23 +14,7 @@ ribbon:
   ConnectTimeout: 10000
 
 zuul:
-  host:
-    connect-timeout-millis: 30000
-    socket-timeout-millis: 20000
-
   routes:
     api-a:
       path: /api-a/**
-      serviceId: cloud-example-api1
-      stripPrefix: false
-        
-    api-b:
-      path: /api-b/**
-      serviceId: cloud-example-api2
-      stripPrefix: false
-        
-    api-c:
-      path: /api-c/**
-      url: http://localhost:9001
-      stripPrefix: false
-      sensitiveHeaders:   
+      serviceId: CLOUD-EXAMPLE-API1
