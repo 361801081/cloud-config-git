@@ -13,6 +13,17 @@ ribbon:
   ReadTimeout: 20000
   ConnectTimeout: 20000
 
+zuul:
+  ignoredServices: '*'
+  host:
+    connect-timeout-millis: 200000
+    socket-timeout-millis: 200000
 
+  routes:
+    api1:
+        path: /api1/**
+        serviceId:  cloud-example-api1
+        stripPrefix: false
+        sensitiveHeaders:
 
    
