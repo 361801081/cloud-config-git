@@ -1,0 +1,12 @@
+spring:
+  redis:
+    password: redistest2017
+    database: 0  
+    port: 6379  
+    pool:
+      max-idle: 8  
+      min-idle: 0  
+      max-active: 100  
+      max-wait: 10  
+    host: 119.80.240.103
+    timeout: 0
