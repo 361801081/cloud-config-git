@@ -1,10 +1,5 @@
 server:
-  port: 8060
-
-management:
-  security:
-    enabled: false
-
+  port: 8083
 hystrix:
   command:
     default:
@@ -14,19 +9,37 @@ hystrix:
             timeoutInMilliseconds: 20000
 
 ribbon:
-  ReadTimeout: 10000
-  ConnectTimeout: 10000
+  ReadTimeout: 20000
+  ConnectTimeout: 20000
 
 zuul:
   ignoredServices: '*'
+  host:
+    connect-timeout-millis: 20000
+    socket-timeout-millis: 20000
+
   routes:
     auth-service:
-      path: /uaa/**
-      stripPrefix: false
-      sensitiveHeaders:
-    svca-service:
-      path: /svca/**
-      sensitiveHeaders:
-    svcb-service:
-      path: /svcb/**
-      sensitiveHeaders:
+        path: /uaa/**
+        url: http://auth-service:5000
+        stripPrefix: false
+        sensitiveHeaders:
+
+    account-service:
+        path: /accounts/**
+        serviceId: account-service
+        stripPrefix: false
+        sensitiveHeaders:
+
+    statistics-service:
+        path: /statistics/**
+        serviceId: statistics-service
+        stripPrefix: false
+        sensitiveHeaders:
+
+    notification-service:
+        path: /notifications/**
+        serviceId: notification-service
+        stripPrefix: false
+        sensitiveHeaders:
+

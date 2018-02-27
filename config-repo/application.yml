@@ -1,0 +1,11 @@
+eureka:
+  instance:
+    hostname: cloud-eureka-server
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://${security.user.name}:${security.user.password}@localhost:8082/eureka/
+security:
+  user:
+    name: user
+    password: password
