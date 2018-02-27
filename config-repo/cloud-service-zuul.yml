@@ -1,26 +1,38 @@
 server:
   port: 8083
   
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 40000
+
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
+
 zuul:
   host:
     connect-timeout-millis: 30000
     socket-timeout-millis: 20000
 
   routes:
-    api1:
-      path: /api1/**
+    api-a:
+      path: /api-a/**
       serviceId: cloud-example-api1
       stripPrefix: false
       sensitiveHeaders:
         
-    api2:
-      path: /api2/**
+    api-b:
+      path: /api-b/**
       serviceId: cloud-example-api2
       stripPrefix: false
       sensitiveHeaders:   
         
-    api3:
-      path: /api3/**
+    api-c:
+      path: /api-c/**
       url: http://localhost:9001
       stripPrefix: false
       sensitiveHeaders:   
