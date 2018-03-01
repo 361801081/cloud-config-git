@@ -21,3 +21,17 @@ zuul:
     api-b:
       path: /api-b/**
       serviceId: CLOUD-EXAMPLE-API2
+jwt:
+  header: Authorization
+  secret: mySecret
+  expiration: 604800
+  tokenHead: "Bearer "
+  route:
+    authentication:
+      path: auth
+      refresh: refresh
+      register: aFuth/register
+
+logging:
+  config: classpath:logback.xml
+
