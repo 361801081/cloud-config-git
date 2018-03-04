@@ -1,4 +1,4 @@
 server:
   port: 9001
 name: cloud-example-api1
-profile: cloud-example-api1-dev-1
+profile: cloud-example-api1-dev-2
