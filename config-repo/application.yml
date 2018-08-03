@@ -1,11 +1,14 @@
-eureka:
-  instance:
-    hostname: cloud-eureka-server
-    prefer-ip-address: true
-  client:
-    service-url:
-      defaultZone: http://${security.user.name}:${security.user.password}@localhost:8082/eureka/
-security:
-  user:
-    name: user
-    password: password
+#eureka:
+#  instance:
+#    hostname: cloud-eureka-server
+#    prefer-ip-address: true
+#  client:
+#    service-url:
+#      defaultZone: http://${security.user.name}:${security.user.password}@localhost:8082/eureka/
+#security:
+#  user:
+#    name: user
+#    password: password
+worker:
+  task1:
+    cron: 0/10 * * * * ?
